@@ -1,0 +1,7 @@
+[cmd + option + m]/[ctrl + alt + m] sur selection code -> Créer une methode
+[cmd + option + v]/[ctrl + alt + v] sur selection code -> Créer une variable
+[cmd d][cmd y]/[ctrl d][ctrl y]sur ligne -> dupliquer / remove
+
+
+^
+^
