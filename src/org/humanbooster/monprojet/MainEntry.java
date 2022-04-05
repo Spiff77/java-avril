@@ -9,7 +9,7 @@ public class MainEntry {
 
     public static void main(String[] args) {
 
-        ComptePayant c1 = new ComptePayant();
+        ComptePayant c1 = new ComptePayant(5000);
         System.out.println(c1);
         c1.verser(1000);
         System.out.println(c1);

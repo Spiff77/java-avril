@@ -6,7 +6,8 @@ public class Compte {
     protected float solde;
     public static int countComptes;
 
-    public Compte() {
+    public Compte(float solde) {
+        this.solde = solde;
         this.id = ++countComptes;
     }
 
