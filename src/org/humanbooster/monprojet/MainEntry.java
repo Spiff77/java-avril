@@ -1,34 +1,22 @@
 package org.humanbooster.monprojet;
 
-import org.humanbooster.monprojet.model.animal.Animal;
-import org.humanbooster.monprojet.model.animal.Cheval;
-import org.humanbooster.monprojet.model.animal.Tigre;
-import org.humanbooster.monprojet.model.garage.Voiture;
-
-import java.util.ArrayList;
+import org.humanbooster.monprojet.model.Bank.Compte;
+import org.humanbooster.monprojet.model.Bank.CompteEpargne;
+import org.humanbooster.monprojet.model.Bank.ComptePayant;
+import org.humanbooster.monprojet.model.Bank.CompteSimple;
 
 public class MainEntry {
 
     public static void main(String[] args) {
 
-        ArrayList<Animal> animals = new ArrayList<>();
-
-        animals.add(new Tigre("Sherkan", 20, 84, 50));
-        animals.add(new Cheval("JJ", 19, 3));
-        animals.add(new Tigre("Sherkan2", 20, 8 , 50));
-        animals.add(new Cheval("JJ2", 19, 3));
-        animals.add(new Tigre("Sherkan3", 20, 84, 50));
-        animals.add(new Tigre("Sherkan4", 20, 84, 50));
-
-        for (Animal animal : animals) {
-            if(animal instanceof Tigre){
-                ((Tigre)animal).bondit();
-            }
-            animal.manger();
-        }
+        ComptePayant c1 = new ComptePayant();
+        System.out.println(c1);
+        c1.verser(1000);
+        System.out.println(c1);
+        c1.retirer(100);
+        System.out.println(c1);
 
     }
-
 }
 
 
