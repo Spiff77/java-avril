@@ -2,10 +2,8 @@ package org.humanbooster.monprojet.model.animal;
 
 public class Cheval extends Animal{
 
-    private int hauteurSaut;
-
-    public Cheval(String name, int age, int hauteurSaut) {
-        super(name, age);
-        this.hauteurSaut = hauteurSaut;
+    @Override
+    public void manger() {
+        System.out.println("Le cheval mange du foin");
     }
 }

@@ -1,36 +1,26 @@
 package org.humanbooster.monprojet;
 
-import org.humanbooster.monprojet.model.Bank.Compte;
-import org.humanbooster.monprojet.model.Bank.CompteEpargne;
-import org.humanbooster.monprojet.model.Bank.ComptePayant;
-import org.humanbooster.monprojet.model.Bank.CompteSimple;
+import org.humanbooster.monprojet.model.animal.Animal;
+import org.humanbooster.monprojet.model.animal.Cheval;
+import org.humanbooster.monprojet.model.animal.Tigre;
+import org.humanbooster.monprojet.model.garage.Boat;
+import org.humanbooster.monprojet.model.garage.Car;
+import org.humanbooster.monprojet.model.garage.Owner;
+import org.humanbooster.monprojet.model.garage.Plane;
+
+import java.util.ArrayList;
 
 public class MainEntry {
 
     public static void main(String[] args) {
 
-        ComptePayant c1 = new ComptePayant(5000);
-        System.out.println(c1);
-        c1.verser(1000);
-        System.out.println(c1);
-        c1.retirer(100);
-        System.out.println(c1);
+        Owner o = new Owner("JeanJean");
+        o.add(new Boat(20, "Yamaha"));
+        o.add(new Plane(1000, "Boeing"));
+        o.add(new Car(2, "Fiat"));
+        o.add(new Plane(2100, "Fiat"));
+
+        System.out.println(o.countByBrand("fiat"));
 
     }
 }
-
-
-// 0003
-// 0004
-// 0005 --> deux versions
-/*
-
-Animal
-    - manger() --> L'animal broute de l'herbe fraiche
-
-
-  Cheval extends Animal
-
-  Tigre extends Animal
-     - manger() --> Le tigre saute sur le zèbre
- */

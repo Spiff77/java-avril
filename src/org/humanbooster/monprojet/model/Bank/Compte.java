@@ -1,6 +1,6 @@
 package org.humanbooster.monprojet.model.Bank;
 
-public class Compte {
+public abstract class Compte {
 
     private int id;
     protected float solde;
