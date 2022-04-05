@@ -18,6 +18,19 @@ public class Owner {
         return (int) this.vehicles.stream().filter(v -> v.brand.equalsIgnoreCase(brand)).count();
     }
 
+    public void startAll(){
+        for (Vehicle vehicle : this.vehicles) {
+            vehicle.start();
+
+            if(vehicle instanceof Plane){
+                ((Plane) vehicle).fly();
+            }
+            if(vehicle instanceof Boat b){
+                b.sail();
+            }
+        }
+    }
+
     public String getName() {
         return name;
     }
